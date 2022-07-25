@@ -219,7 +219,7 @@
     "react-router-dom": "^5.0.0",
     "react-stripe-elements": "^3.0.0",
     "react-visibility-sensor": "^5.0.2",
-    "reactstrap": "https://registry.npmjs.org/@sqs/reactstrap/-/reactstrap-6.5.0-tmp1.tgz",
+    "reactstrap": "6.5.0",
     "rxjs": "^6.5.2",
     "sanitize-html": "^1.20.0",
     "semver": "^6.0.0",
