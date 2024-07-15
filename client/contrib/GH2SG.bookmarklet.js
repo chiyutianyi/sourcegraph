@@ -1,4 +1,4 @@
-javascript:(function() {
+(function() {
   if (window.location.hostname !== 'github.com' && window.location.hostname !== 'sourcegraph.com') {
     alert('This bookmarklet may only be used on GitHub.com or Sourcegraph.com, not ' + window.location.hostname + '.');
     return;
