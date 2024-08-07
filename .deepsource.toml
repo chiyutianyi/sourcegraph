@@ -2,14 +2,15 @@ version = 1
 
 [[analyzers]]
 name = "go"
-enabled = true
 
   [analyzers.meta]
   import_root = "github.com/chiyutianyi/sourcegraph"
 
 [[analyzers]]
 name = "javascript"
-enabled = true
 
   [analyzers.meta]
   plugins = ["react"]
+
+[[transformers]]
+name = "gofmt"
