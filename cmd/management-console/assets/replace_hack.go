@@ -1,3 +1,4 @@
+//go:build ignore
 // +build ignore
 
 // replace_hack is a hack that swaps out the build tag in the assets_vfsdata.go

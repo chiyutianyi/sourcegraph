@@ -19,9 +19,9 @@ func TestParse(t *testing.T) {
 			wantOperations: [][2]string{{"file", "mux.go"}, {"involves", "bill jack sarah"}, {"order", "oldest"}, {"-repo", "foo"}},
 		},
 		{
-			name:          "string_escape",
-			input:         `foo:"bar 123\tefg 1:\"2:3"`,
-			wantRemaining: "",
+			name:           "string_escape",
+			input:          `foo:"bar 123\tefg 1:\"2:3"`,
+			wantRemaining:  "",
 			wantOperations: [][2]string{{"foo", `bar 123	efg 1:"2:3`}},
 		},
 		{

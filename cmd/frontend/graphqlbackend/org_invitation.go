@@ -52,7 +52,9 @@ func (r *organizationInvitationResolver) Sender(ctx context.Context) (*UserResol
 func (r *organizationInvitationResolver) Recipient(ctx context.Context) (*UserResolver, error) {
 	return UserByIDInt32(ctx, r.v.RecipientUserID)
 }
-func (r *organizationInvitationResolver) CreatedAt() string { return r.v.CreatedAt.Format(time.RFC3339) }
+func (r *organizationInvitationResolver) CreatedAt() string {
+	return r.v.CreatedAt.Format(time.RFC3339)
+}
 func (r *organizationInvitationResolver) NotifiedAt() *string {
 	if r.v.NotifiedAt == nil {
 		return nil

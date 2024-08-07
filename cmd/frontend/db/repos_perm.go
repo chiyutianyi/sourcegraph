@@ -23,18 +23,18 @@ var mockAuthzFilter func(ctx context.Context, repos []*types.Repo, p authz.Perm)
 //
 // The enforcement policy:
 //
-// - If there are no authz providers and `authzAllowByDefault` is true, then the repository is
-//   accessible to everyone.
+//   - If there are no authz providers and `authzAllowByDefault` is true, then the repository is
+//     accessible to everyone.
 //
-// - Otherwise, each repository must have an external repo spec. If a repo doesn't have one, we
-//   cannot definitively associate the repository with an authz provider, and therefore we
-//   *never* return the repository.
+//   - Otherwise, each repository must have an external repo spec. If a repo doesn't have one, we
+//     cannot definitively associate the repository with an authz provider, and therefore we
+//     *never* return the repository.
 //
-// - Scan through the list of authz providers until we find one that matches the repository. Return
-//   whether or not the repository accessible according to that authz provider.
+//   - Scan through the list of authz providers until we find one that matches the repository. Return
+//     whether or not the repository accessible according to that authz provider.
 //
-// - If no authz providers match the repository, consult `authzAllowByDefault`. If true, then return
-//   the repository; otherwise, do not.
+//   - If no authz providers match the repository, consult `authzAllowByDefault`. If true, then return
+//     the repository; otherwise, do not.
 func authzFilter(ctx context.Context, repos []*types.Repo, p authz.Perm) ([]*types.Repo, error) {
 	if mockAuthzFilter != nil {
 		return mockAuthzFilter(ctx, repos, p)

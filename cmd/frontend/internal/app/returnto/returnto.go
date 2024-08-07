@@ -9,16 +9,16 @@
 // after successfully logging in. This is accomplished through the
 // following steps:
 //
-// 1. The "login" link in the navigation bar links to, e.g.,
-//    "/login?return-to=/a".
+//  1. The "login" link in the navigation bar links to, e.g.,
+//     "/login?return-to=/a".
 //
-// 2. The login form, when submitted, POSTS to "/login?return-to=/a"
-//    (where the "/a" is taken from the URL's "return-to" query
-//    param).
+//  2. The login form, when submitted, POSTS to "/login?return-to=/a"
+//     (where the "/a" is taken from the URL's "return-to" query
+//     param).
 //
-// 3. The login submission handler redirects to "/a" after a
-//    successful login (where the "/a" is taken from the POST request's
-//    "return-to" query param).
+//  3. The login submission handler redirects to "/a" after a
+//     successful login (where the "/a" is taken from the POST request's
+//     "return-to" query param).
 package returnto
 
 import (

@@ -18,10 +18,10 @@ import (
 //
 // The format is "CLONEURL?REV#PATH". For example:
 //
-//   git://github.com/facebook/react?master
-//   git://github.com/gorilla/mux?HEAD
-//   git://github.com/golang/go?0dc31fb#src/net/http/server.go
-//   git://github.com/golang/tools?79f4a1#godoc/page.go
+//	git://github.com/facebook/react?master
+//	git://github.com/gorilla/mux?HEAD
+//	git://github.com/golang/go?0dc31fb#src/net/http/server.go
+//	git://github.com/golang/tools?79f4a1#godoc/page.go
 //
 // A Sourcegraph URI is not guaranteed (or intended) to be a unique or
 // canonical reference to a resource. A repository can be clonable at

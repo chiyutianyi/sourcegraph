@@ -100,24 +100,23 @@ func Code(ctx context.Context, content []byte, filepath string, disableTimeout b
 
 // preSpansToTable takes the syntect data structure, which looks like:
 //
-// 	<pre>
-// 	<span style="color:#foobar">thecode.line1</span>
-// 	<span style="color:#foobar">thecode.line2</span>
-// 	</pre>
+//	<pre>
+//	<span style="color:#foobar">thecode.line1</span>
+//	<span style="color:#foobar">thecode.line2</span>
+//	</pre>
 //
 // And turns it into a table in the format which the frontend expects:
 //
-// 	<table>
-// 	<tr>
-// 		<td class="line" data-line="1"></td>
-// 		<td class="code"><span style="color:#foobar">thecode.line1</span></td>
-// 	</tr>
-// 	<tr>
-// 		<td class="line" data-line="2"></td>
-// 		<td class="code"><span style="color:#foobar">thecode.line2</span></td>
-// 	</tr>
-// 	</table>
-//
+//	<table>
+//	<tr>
+//		<td class="line" data-line="1"></td>
+//		<td class="code"><span style="color:#foobar">thecode.line1</span></td>
+//	</tr>
+//	<tr>
+//		<td class="line" data-line="2"></td>
+//		<td class="code"><span style="color:#foobar">thecode.line2</span></td>
+//	</tr>
+//	</table>
 func preSpansToTable(h string) (string, error) {
 	doc, err := html.Parse(strings.NewReader(h))
 	if err != nil {

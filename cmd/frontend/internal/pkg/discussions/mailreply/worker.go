@@ -154,9 +154,9 @@ var gmailQuoteMatch = regexp.MustCompile(`(\r\n|\n).*On .* at .*, (.|\r\n|\n)*wr
 // message. This is a best-effort approach. In specific, it looks for the
 // pattern:
 //
-// 	On $DATE at $TIME, $NAME $EMAIL wrote:
-// 	> $ANYTHING
-//  > $ANYTHING
+//		On $DATE at $TIME, $NAME $EMAIL wrote:
+//		> $ANYTHING
+//	 > $ANYTHING
 //
 // When found, everything past that line is removed.
 func trimGmailReplyQuote(m []byte) []byte {

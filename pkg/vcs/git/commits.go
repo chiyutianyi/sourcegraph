@@ -294,7 +294,7 @@ type onelineCommit struct {
 
 // parseCommitsFromOnelineLog parses the commits from the output of:
 //
-//   git log --oneline -z --source --no-patch
+//	git log --oneline -z --source --no-patch
 func parseCommitsFromOnelineLog(data []byte) (commits []*onelineCommit, err error) {
 	entries := bytes.Split(data, []byte{'\x00'})
 	for _, e := range entries {

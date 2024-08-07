@@ -17,7 +17,6 @@ import (
 // - The critical configuration, from the database (from the management console).
 // - The site configuration, from the database (from the site-admin panel).
 // - Service connections, from the frontend (e.g. which gitservers to talk to).
-//
 type Unified struct {
 	schema.SiteConfiguration
 	Critical           schema.CriticalConfiguration
