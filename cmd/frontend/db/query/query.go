@@ -48,12 +48,12 @@ type not struct {
 //
 // For example in the expression
 //
-//   And("atom1", Or(true, "atom2", &atom3{})
+//	And("atom1", Or(true, "atom2", &atom3{})
 //
 // atomToQueryFn is responsible for converting "atom1", "atom2" and &atom3{}
 // into sqlf.Query patterns. Eval will return the expression:
 //
-//   (query1 AND (query2 OR query3))
+//	(query1 AND (query2 OR query3))
 //
 // Where queryN is the respective output of atomToQueryFn.
 //

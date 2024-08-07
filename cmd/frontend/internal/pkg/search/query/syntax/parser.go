@@ -27,11 +27,11 @@ type context struct {
 //
 // BNF-ish query syntax:
 //
-//   exprList  := {exprSign} | exprSign (sep exprSign)*
-//   exprSign  := {"-"} expr
-//   expr      := fieldExpr | lit | quoted | pattern
-//   fieldExpr := lit ":" value
-//   value     := lit | quoted
+//	exprList  := {exprSign} | exprSign (sep exprSign)*
+//	exprSign  := {"-"} expr
+//	expr      := fieldExpr | lit | quoted | pattern
+//	fieldExpr := lit ":" value
+//	value     := lit | quoted
 func Parse(input string) (*Query, error) {
 	tokens := Scan(input)
 	p := parser{tokens: tokens}

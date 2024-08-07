@@ -83,13 +83,13 @@ func repoShortName(name api.RepoName) string {
 // In the event of the repository having been renamed, the request is handled
 // by newCommon and nil, nil is returned. Basic usage looks like:
 //
-// 	common, err := newCommon(w, r, serveError)
-// 	if err != nil {
-// 		return err
-// 	}
-// 	if common == nil {
-// 		return nil // request was handled
-// 	}
+//	common, err := newCommon(w, r, serveError)
+//	if err != nil {
+//		return err
+//	}
+//	if common == nil {
+//		return nil // request was handled
+//	}
 //
 // In the case of a repository that is cloning, a Common data structure is
 // returned but it has an incomplete RevSpec.

@@ -511,8 +511,8 @@ func ExpandFileContent(q Q) Q {
 // For example if we have the repos github.com/foo/{bar,baz} and
 // github.com/hello/world, an example listFn could do the following:
 //
-//    listFn([]string{"github.com/foo/.*"}, []string{".*baz.*"})
-//     -> []string{"github.com/foo/bar"}
+//	listFn([]string{"github.com/foo/.*"}, []string{".*baz.*"})
+//	 -> []string{"github.com/foo/bar"}
 func ExpandRepo(q Q, listFn func(include, exclude []string) (map[string]struct{}, error)) (Q, error) {
 	// We want nested ors/ands to be flattened
 	q = Simplify(q)

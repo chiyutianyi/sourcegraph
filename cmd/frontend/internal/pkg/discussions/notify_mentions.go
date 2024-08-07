@@ -83,9 +83,8 @@ type notifier struct {
 // subscription store, so we rely on some simple mechanics to get a good-enough
 // result:
 //
-// 	1. If you were previously mentioned in the thread, you are subscribed.
-// 	2. If you previously authored a comment, you are subscribed.
-//
+//  1. If you were previously mentioned in the thread, you are subscribed.
+//  2. If you previously authored a comment, you are subscribed.
 func (n *notifier) subscribers(ctx context.Context) ([]string, error) {
 	comments, err := db.DiscussionComments.List(ctx, &db.DiscussionCommentsListOptions{
 		LimitOffset: &db.LimitOffset{

@@ -190,11 +190,11 @@ func (p *GitLabOAuthAuthzProvider) RepoPerms(ctx context.Context, account *extsv
 }
 
 // fetchProjVis fetches a repository's visibility with usr's credentials. It returns:
-// - whether the project is accessible to the user,
-// - the visibility if the repo is accessible (otherwise this is empty),
-// - whether the repository contents are accessible to usr, and
-// - any error encountered in fetching (not including an error due to the repository not being visible);
-//   if the error is non-nil, all other return values should be disregraded
+//   - whether the project is accessible to the user,
+//   - the visibility if the repo is accessible (otherwise this is empty),
+//   - whether the repository contents are accessible to usr, and
+//   - any error encountered in fetching (not including an error due to the repository not being visible);
+//     if the error is non-nil, all other return values should be disregraded
 func (p *GitLabOAuthAuthzProvider) fetchProjVis(ctx context.Context, oauthToken string, projID int) (
 	isAccessible bool, vis gitlab.Visibility, isContentAccessible bool, err error,
 ) {

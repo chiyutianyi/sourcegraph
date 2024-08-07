@@ -50,7 +50,7 @@ type DocIterator interface {
 // are no matches for a literal substring, we can be sure there are no regexp
 // matches)..
 //
-// The general process for a given (shard, query) is
+// # The general process for a given (shard, query) is
 //
 // - construct MatchTree for the query
 //
@@ -66,7 +66,6 @@ type DocIterator interface {
 //
 //   - if the complete tree returns (matches() == true) for the document,
 //     collect all text matches by looking at leaf matchTrees
-//
 type MatchTree interface {
 	DocIterator
 
