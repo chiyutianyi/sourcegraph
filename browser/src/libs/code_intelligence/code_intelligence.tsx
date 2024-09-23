@@ -486,7 +486,7 @@ export function handleCodeHost({
 
     subscriptions.add(
         codeViews.subscribe(codeViewEvent => {
-            console.log(`Code view ${codeViewEvent.type}`)
+            
 
             // Handle added or removed view component, workspace root and subscriptions
             if (codeViewEvent.type === 'added' && !codeViewStates.has(codeViewEvent.element)) {

@@ -46,7 +46,7 @@ export function handleTextFields(
     const nextModelUri = () => `${COMMENT_URI_SCHEME}://${seq++}`
 
     return textFields.subscribe(textFieldEvent => {
-        console.log(`Text field ${textFieldEvent.type}`, { textFieldEvent })
+        
 
         // Handle added or removed text fields.
         if (textFieldEvent.type === 'added' && !textFieldStates.has(textFieldEvent.element)) {

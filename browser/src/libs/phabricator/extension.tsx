@@ -73,11 +73,7 @@ function init(): void {
             )
             .catch(e => console.error(e))
     } else {
-        console.log(
-            `Sourcegraph on Phabricator is disabled because window.localStorage.getItem('SOURCEGRAPH_DISABLED') is set to ${window.localStorage.getItem(
-                'SOURCEGRAPH_DISABLED'
-            )}.`
-        )
+        
     }
 }
 

@@ -95,7 +95,7 @@ export class ContributionRegistry {
         entries: Observable<ContributionsEntry[]>,
         scope: ContributionScope | undefined,
         extraContext?: Context<T>,
-        logWarning = (...args: any[]) => console.log(...args)
+        logWarning = (...args: any[]) => {}
     ): Observable<Evaluated<Contributions>> {
         return combineLatest(
             entries.pipe(

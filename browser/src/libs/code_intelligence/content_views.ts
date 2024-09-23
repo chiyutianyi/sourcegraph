@@ -75,7 +75,7 @@ export function handleContentViews(
                 }
                 return of(contentViewEvent)
             }),
-            tap(contentViewEvent => console.log(`Content view ${contentViewEvent.type}`, { contentViewEvent })),
+            tap(contentViewEvent => {}),
             tap(contentViewEvent => {
                 // Handle added, updated, or removed content views.
 

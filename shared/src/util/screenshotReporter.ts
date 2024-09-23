@@ -47,8 +47,8 @@ async function takeScreenshot(
     await page.screenshot({ path: filePath })
     if (process.env.CI) {
         // Print image with ANSI escape code for Buildkite: https://buildkite.com/docs/builds/images-in-log-output.
-        console.log(`\u001B]1338;url="artifact://${path.relative(repoRootDir, filePath)}";alt="Screenshot"\u0007`)
+        
     } else {
-        console.log(`Saved screenshot of failure to ${path.relative(process.cwd(), filePath)}`)
+        
     }
 }
