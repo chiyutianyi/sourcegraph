@@ -316,7 +316,7 @@ async function main(): Promise<void> {
      */
     endpointPairs.subscribe(
         ({ proxy, expose }) => {
-            console.log('Extension host client connected')
+            
             // It's necessary to wrap endpoints because browser.runtime.Port objects do not support transfering MessagePorts.
             // See https://github.com/GoogleChromeLabs/comlink/blob/master/messagechanneladapter.md
             const { worker, clientEndpoints } = createExtensionHostWorker({ wrapEndpoints: true })
@@ -345,7 +345,7 @@ async function main(): Promise<void> {
         }
     )
 
-    console.log('Sourcegraph background page initialized')
+    
 }
 
 // Browsers log this unhandled Promise automatically (and with a better stack trace through console.error)

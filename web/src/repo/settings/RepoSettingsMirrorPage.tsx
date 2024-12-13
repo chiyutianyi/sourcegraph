@@ -166,7 +166,7 @@ class CheckMirrorRepositoryConnectionActionContainer extends React.PureComponent
                         this.setState({ result, loading: false })
                         this.props.onDidUpdateReachability(result.error === null)
                     },
-                    error => console.log(error)
+                    error => {}
                 )
         )
 

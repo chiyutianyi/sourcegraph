@@ -33,7 +33,7 @@ const IS_EXTENSION = true
  * Main entry point into browser extension.
  */
 async function main(): Promise<void> {
-    console.log('Sourcegraph browser extension is running')
+    
 
     // Make sure DOM is fully loaded
     if (document.readyState !== 'complete' && document.readyState !== 'interactive') {
@@ -86,7 +86,7 @@ async function main(): Promise<void> {
 
     // For the life time of the content script, add features in reaction to DOM changes
     if (codeHost) {
-        console.log('Detected code host', codeHost.name)
+        
         subscriptions.add(await injectCodeIntelligenceToCodeHost(mutations, codeHost, IS_EXTENSION))
     }
 }
